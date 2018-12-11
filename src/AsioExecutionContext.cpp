@@ -22,7 +22,7 @@ bool AsioExecutionContext::runOne() {
 void AsioExecutionContext::run() {
     while (true) {
         while (runOne());
-        if (_io_service.run() == 0)
+        if (_io_service->run() == 0)
             return;
     }
 }

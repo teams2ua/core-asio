@@ -3,9 +3,9 @@ project(syncbanch)
 
 include_directories(../3rdparty/asio/include)
 include_directories(../3rdparty/uri/include)
-include_directories(../../../Ledger/lib-core/lib-core-build/include)
+include_directories(${LEDGER_CORE_BLD_PATH}/include)
 
-link_directories(../../../Ledger/lib-core/lib-core-build/core/src/build/)
+link_directories(${LEDGER_CORE_BLD_PATH}/core/src/build/)
 link_directories(../3rdparty/uri/src/)
 
 add_executable(syncbanch

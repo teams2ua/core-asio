@@ -1,6 +1,6 @@
 #pragma once
-#include "AsioExecutionContext.hpp"
-#include <ledger/core/api/Runnable.hpp>
+#include "../include/AsioExecutionContext.hpp"
+#include <api/Runnable.hpp>
 
 void AsioExecutionContext::execute(const std::shared_ptr<ledger::core::api::Runnable> & runnable) {
     q.push(runnable);
@@ -22,7 +22,7 @@ bool AsioExecutionContext::runOne() {
 void AsioExecutionContext::run() {
     while (true) {
         while (runOne());
-        if (_io_service->run() == 0)
+        if (_io_service.run() == 0)
             return;
     }
 }

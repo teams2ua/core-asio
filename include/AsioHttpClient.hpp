@@ -1,14 +1,11 @@
 #pragma once
 
-#include <asio.hpp>
-#include <ledger/core/api/HttpClient.hpp>
-#include <ledger/core/api/ExecutionContext.hpp>
-#include <ledger/core/api/HttpMethod.hpp>
-#include <ledger/core/api/HttpReadBodyResult.hpp>
-#include <ledger/core/api/HttpUrlConnection.hpp>
-#include <ledger/core/api/HttpRequest.hpp>
-
-
+#include <api/HttpClient.hpp>
+#include <api/ExecutionContext.hpp>
+#include <api/HttpMethod.hpp>
+#include <api/HttpReadBodyResult.hpp>
+#include <api/HttpUrlConnection.hpp>
+#include <api/HttpRequest.hpp>
 
 class AsioExecutionContext;
 
